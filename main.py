@@ -3,6 +3,9 @@ from merge_sort import merge_sort
 from quick_sort import quick_sort
 from shell_sort import shell_sort
 from bubble_Sort import bubble_sort
+from improved_bubble_Sort import improved_bubble_sort
+from insertion_Sort import insertion_sort
+
 
 import random
 import time
@@ -24,7 +27,7 @@ def generate_fixed_data(size, case):
     else:
         return casos_medios.get(size, [])
 
-algorithms = [bubble_sort,selection_sort, merge_sort, quick_sort, shell_sort]
+algorithms = [bubble_sort, improved_bubble_sort, insertion_sort, selection_sort, merge_sort, quick_sort, shell_sort]
 cases = ['melhor','pior','aleatorio']
 sizes = [1000, 10000]
 
