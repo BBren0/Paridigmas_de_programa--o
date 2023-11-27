@@ -29,7 +29,7 @@ def generate_fixed_data(size, case):
 
 algorithms = [bubble_sort, improved_bubble_sort, insertion_sort, selection_sort, merge_sort, quick_sort, shell_sort]
 cases = ['melhor','pior','aleatorio']
-sizes = [1000, 10000]
+sizes = [1000, 10000, 100000]
 
 data_dict = {
     'Algoritmo': [],
@@ -59,6 +59,10 @@ for algorithm in algorithms:
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 pd.set_option('display.width', None)
-df = pd.DataFrame(data_dict)
 
+df = pd.DataFrame(data_dict)
 print(df)
+
+excel_filename = 'result.xlsx'
+df.to_excel(excel_filename, index=False)
+print(f'Dados salvos em {excel_filename}')
